@@ -1,0 +1,29 @@
+{
+    "keyboard.dispatch": "keyCode",
+    "files.trimTrailingWhitespace": true,
+    "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#5C6BC0",
+        "list.activeSelectionForeground": "#5C6BC0",
+        "list.inactiveSelectionForeground": "#5C6BC0",
+        "list.highlightForeground": "#5C6BC0",
+        "scrollbarSlider.activeBackground": "#5C6BC050",
+        "editorSuggestWidget.highlightForeground": "#5C6BC0",
+        "textLink.foreground": "#5C6BC0",
+        "progressBar.background": "#5C6BC0",
+        "pickerGroup.foreground": "#5C6BC0",
+        "tab.activeBorder": "#5C6BC0",
+        "notificationLink.foreground": "#5C6BC0"
+    },
+    "materialTheme.cache.workbench.settings": {
+        "accent": "Indigo"
+    },
+    "workbench.colorTheme": "Material Theme Darker",
+    "editor.wordWrap": "on",
+    "vim.useSystemClipboard":true,
+    "vim.hlsearch": true,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 2,
+    "vim.useCtrlKeys": false,
+}

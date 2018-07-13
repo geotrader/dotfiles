@@ -1,0 +1,9 @@
+setxkbmap -layout jp -model jp106
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIER="@im=fcitx"
+export XMODIFIERS="@im=fcitx"
+export DefaultIMModule=fcitx
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap/mykbd $DISPLAY

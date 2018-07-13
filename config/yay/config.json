@@ -1,0 +1,17 @@
+{
+	"buildDir": "/home/geotrader/.cache/yay/",
+	"editor": "nvim",
+	"makepkgbin": "makepkg",
+	"pacmanbin": "pacman",
+	"pacmanconf": "/etc/pacman.conf",
+	"tarbin": "bsdtar",
+	"redownload": "no",
+	"gitbin": "git",
+	"mflags": "",
+	"requestsplitn": 150,
+	"sortmode": 0,
+	"sudoloop": false,
+	"timeupdate": false,
+	"devel": false,
+	"cleanAfter": false
+}

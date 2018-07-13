@@ -1,0 +1,48 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]] #multi cursors like sublime text
+repo = 'terryma/vim-multiple-cursors'
+
+[[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]] # toggle commentout
+repo = 'tyru/caw.vim'
+hook_add = 'map <C-_> <Plug>(caw:hatpos:toggle)'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # カラースキーマ
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+  set background=dark
+  " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
+  " 但し Colorscheme イベントの発生が抑制されないよう nented を付ける。
+  "au MyAutoCmd VimEnter * nented colorscheme hybrid
+''' 
+# Haskell config ----
+[[plugins]] # support for completion.
+#repo = 'Shougo/deoplete.nvim'
+
+[[plugins]] # powerfull Haskell highlight
+repo = 'dag/vim2hs'
+
+[[pluings]] # integrate to ghcmod.it is static analysis plugin.
+repo = 'eagletmt/ghcmod-vim'
+
+[[plugins]] # support completion with neocomplecache
+repo = 'eagletmt/neco-ghc'
+
+# -------------------
+[[plugins]] # see man through nvim
+repo = 'paretje/nvim-man'
+
+
+

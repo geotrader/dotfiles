@@ -1,0 +1,5 @@
+xkb_symbols "prefer" {
+  replace key <AC10> { [Return] };
+  replace key <HENK> { [BackSpace] };
+  replace key <MUHE> { [F7] };
+};
