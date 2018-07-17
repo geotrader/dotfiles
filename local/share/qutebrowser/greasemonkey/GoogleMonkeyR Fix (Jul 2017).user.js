@@ -1,14 +1,9 @@
 // ==UserScript==
 // @author			mungushume
-// @version			1.7.4
+// @version			1.7.4.1
 // @name			GoogleMonkeyR Fix (Jul 2017)
 // @namespace		http://www.monkeyr.com
 // @description		Google - Multiple columns of results, Remove "Sponsored Links", Number results, Auto-load more results, Remove web search dialogues, Open external links in a new tab, self updating and all configurable from a simple user dialogue.
-// @include			http://www.google.*/webhp?*
-// @include			http://www.google.*/search?*
-// @include			http://www.google.*/ig?*
-// @include			http://www.google.*/
-// @include			http://www.google.*/#*
 // @include			https://www.google.*/webhp?*
 // @include			https://www.google.*/search?*
 // @include			https://www.google.*/ig?*
@@ -19,6 +14,8 @@
 // @include			https://encrypted.google.*/ig?*
 // @include			https://encrypted.google.*/
 // @include			https://encrypted.google.*/#*
+// @include			https://encrypted.google.*/#*
+// @exclude			https://www.google.*/search?*tbm=isch*
 // @grant			GM_registerMenuCommand
 // @grant			GM_addStyle
 // @grant			GM_setValue
