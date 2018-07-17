@@ -44,9 +44,9 @@ myKeys =
     , ("M-r" ,spawn "xmonad --recompile; xmonad --restart")
     , ("M-q" ,kill)
     , ("M-<Tab>" ,sendMessage NextLayout)
-    , ("M-<F8>" ,spawn "pactl set-sink-volume 0 +2%")
-    , ("M-<F9>" ,spawn "pactl set-sink-volume 0 -2%")
-    , ("M-<F10>" ,spawn "pactl set-sink-volume 0 0%")
+    , ("M-<F8>" ,spawn "pamixer -i 2 --allow-boost")
+    , ("M-<F9>" ,spawn "pamixer -d 2")
+    , ("M-<F10>" ,spawn "pamixer --toggle-mute")
     ]
     ++
     [ (otherModMasks ++ "M-" ++ [key], action tag)
