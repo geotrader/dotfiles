@@ -75,7 +75,7 @@ myLayoutHook = avoidStruts (tiled ||| Full)
     delta = 1/100
 
 
-myTerminal = "termite"
+myTerminal = "alacritty"
 myModMask = mod4Mask -- Win key or SuperL
 myBorderWidth = 3 -- active window outline
 myWorkspaces = ["1","2","3"]
