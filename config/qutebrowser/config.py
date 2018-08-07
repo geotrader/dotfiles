@@ -47,6 +47,14 @@ c.qt.highdpi = True
 # Type: Bool
 c.auto_save.session = True
 
+# Allow websites to request geolocations.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+c.content.geolocation = True
+
 # Enable JavaScript.
 # Type: Bool
 config.set('content.javascript.enabled', True, 'file://*')
@@ -145,6 +153,7 @@ config.bind('Pp', None)
 config.bind('c', 'tab-clone')
 config.bind('cd', None)
 config.bind('co', None)
+config.bind('gd', None)
 config.bind('h', 'tab-prev')
 config.bind('i', 'hint inputs')
 config.bind('l', 'tab-next')
