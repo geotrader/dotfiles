@@ -8,10 +8,10 @@ def configure(keymap):
     # --------------------------------------------------------------------
     # Text editer setting for editting config.py file
     if 1:
-        keymap.editor = "subl"
+        keymap.editor = "code"
     # --------------------------------------------------------------------
     # Customizing the display
-    keymap.setFont("MS ゴシック", 12)
+    keymap.setFont("RictyDiminishedDiscord", 12)
     keymap.setTheme("black")
     # --------------------------------------------------------------------
 
@@ -79,9 +79,9 @@ def configure(keymap):
 
         keymap_global["A-E"] = lambda: activate_or_execute('everything')
         keymap_global["A-N"] = lambda: activate_or_execute('cfiler', "CfilerWindowClass")
-        keymap_global["A-C"] = lambda: activate_or_execute('firefox', "MozillaWindowClass")
-        keymap_global["A-S"] = lambda: activate_or_execute('subl', "PX_WINDOW_CLASS")
-        keymap_global["A-S"] = lambda: activate_or_execute('qutebrowser', "Qt5QWindowIcon")
+        keymap_global["A-C"] = lambda: activate_or_execute('qutebrowser', "Qt5QWindowIcon")
+        # keymap_global["A-C"] = lambda: activate_or_execute('firefox', "MozillaWindowClass")
+        keymap_global["A-S"] = lambda: activate_or_execute('code', "")
 
     # --------------------------------------------------------------------
 
