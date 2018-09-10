@@ -1,8 +1,7 @@
 import XMonad
 import XMonad.Util.EZConfig (additionalKeysP)
 import qualified XMonad.StackSet as W (view,shift) --for edit client to screen keybind
-import XMonad.Actions.WindowGo(runOrRaise)
-import XMonad.Actions.SpawnOn(spawnOn)
+import XMonad.Hooks.SetWMName
 
 
 -- for bar
@@ -65,6 +64,7 @@ myStartupHook = do
         spawn "bash ~/.config/myStartup/SyncDrive.sh"
         spawn "pkill polybar;polybar example"
         -- spawn "pkill taffybar;taffybar"
+        setWMName "LG3D"
 
 -- myLayoutHook = tiled ||| Full
 myLayoutHook = avoidStruts (tiled ||| Full)
