@@ -136,6 +136,34 @@ c.colors.webpage.bg = 'black'
 # Type: Font
 c.fonts.monospace = '"Ricty Diminished Discord"'
 
+# Font used for prompts.
+# Type: Font
+c.fonts.prompts = '10pt monospace'
+
+# Font family for standard fonts.
+# Type: FontFamily
+c.fonts.web.family.standard = 'monospace'
+
+# Font family for fixed fonts.
+# Type: FontFamily
+c.fonts.web.family.fixed = 'monospace'
+
+# Font family for serif fonts.
+# Type: FontFamily
+c.fonts.web.family.serif = 'monospace'
+
+# Font family for sans-serif fonts.
+# Type: FontFamily
+c.fonts.web.family.sans_serif = 'monospace'
+
+# Font family for cursive fonts.
+# Type: FontFamily
+c.fonts.web.family.cursive = 'monospace'
+
+# Font family for fantasy fonts.
+# Type: FontFamily
+c.fonts.web.family.fantasy = 'monospace'
+
 # Bindings for normal mode
 config.bind('<Alt+Left>', 'back')
 config.bind('<Alt+Right>', 'forward')
