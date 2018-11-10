@@ -90,9 +90,13 @@ c.downloads.remove_finished = 0
 # Type: ShellCommand
 c.editor.command = ['nvim-qt', '{}']
 
-# Show a scrollbar.
-# Type: Bool
-c.scrolling.bar = True
+# When to show the scrollbar.
+# Type: String
+# Valid values:
+#   - always: Always show the scrollbar.
+#   - never: Never show the scrollbar.
+#   - when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to `never`.
+c.scrolling.bar = 'always'
 
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
@@ -142,27 +146,27 @@ c.fonts.prompts = '10pt monospace'
 
 # Font family for standard fonts.
 # Type: FontFamily
-c.fonts.web.family.standard = 'monospace'
+c.fonts.web.family.standard = 'Ricty Diminished Discord'
 
 # Font family for fixed fonts.
 # Type: FontFamily
-c.fonts.web.family.fixed = 'monospace'
+c.fonts.web.family.fixed = 'Ricty Diminished Discord'
 
 # Font family for serif fonts.
 # Type: FontFamily
-c.fonts.web.family.serif = 'monospace'
+c.fonts.web.family.serif = 'Ricty Diminished Discord'
 
 # Font family for sans-serif fonts.
 # Type: FontFamily
-c.fonts.web.family.sans_serif = 'monospace'
+c.fonts.web.family.sans_serif = 'Ricty Diminished Discord'
 
 # Font family for cursive fonts.
 # Type: FontFamily
-c.fonts.web.family.cursive = 'monospace'
+c.fonts.web.family.cursive = 'Ricty Diminished Discord'
 
 # Font family for fantasy fonts.
 # Type: FontFamily
-c.fonts.web.family.fantasy = 'monospace'
+c.fonts.web.family.fantasy = 'Ricty Diminished Discord'
 
 # Bindings for normal mode
 config.bind('<Alt+Left>', 'back')
