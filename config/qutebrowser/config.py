@@ -124,7 +124,7 @@ c.tabs.close_mouse_button = 'right'
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://google.com/search?q={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
 
 # Available zoom levels.
 # Type: List of Perc
