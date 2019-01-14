@@ -24,6 +24,6 @@
     "vim.useSystemClipboard":true,
     "vim.hlsearch": true,
     "explorer.confirmDelete": false,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "vim.useCtrlKeys": false,
 }
