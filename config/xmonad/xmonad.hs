@@ -3,7 +3,6 @@ import XMonad.Util.EZConfig (additionalKeysP)
 import qualified XMonad.StackSet as W (view,shift) --for edit client to screen keybind
 import XMonad.Hooks.SetWMName
 
-
 -- for bar
 import XMonad.Hooks.ManageDocks(docks,avoidStruts)
 import XMonad.Hooks.EwmhDesktops        (ewmh)
@@ -54,6 +53,8 @@ myKeys =
     ]
 
 myStartupHook = do
+        spawn "enpass"
+        spawn "skypeforlinux"
         spawn "pkill pasystray;pasystray"
         spawn "sudo updatedb"
         spawn "pkill greenclip;greenclip daemon"
@@ -62,11 +63,9 @@ myStartupHook = do
         spawn "bash ~/.config/myStartup/configOnlyForMyEnv.sh"
         spawn "bash ~/.config/myStartup/myXkbConfig.sh"
         spawn "bash ~/.config/myStartup/SyncDrive.sh"
-        spawn "pkill polybar;polybar example"
-        -- spawn "pkill taffybar;taffybar"
+        spawn "pkill polybar;polybar myConfig"
         setWMName "LG3D"
 
--- myLayoutHook = tiled ||| Full
 myLayoutHook = avoidStruts (tiled ||| Full)
   where
     tiled = Tall nmaster delta ratio
