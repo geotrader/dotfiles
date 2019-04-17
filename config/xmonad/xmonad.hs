@@ -48,7 +48,7 @@ myKeys =
     ]
     ++
     [ (otherModMasks ++ "M-" ++ [key], action tag)
-      | (tag, key)  <- zip myWorkspaces "312"
+      | (tag, key)  <- zip myWorkspaces "21"
       , (otherModMasks, action) <- [ ("", windows . W.view) , ("S-", windows . W.shift)]
     ]
 
@@ -77,7 +77,7 @@ myLayoutHook = avoidStruts (tiled ||| Full)
 myTerminal = "alacritty"
 myModMask = mod4Mask -- Win key or SuperL
 myBorderWidth = 3 -- active window outline
-myWorkspaces = ["1","2","3"]
+myWorkspaces = ["1","2"]
 
 -- Override the PP values as you would otherwise, adding colors etc depending
 -- on  the statusbar used
