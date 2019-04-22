@@ -64,6 +64,8 @@ myStartupHook = do
         spawn "bash ~/.config/myStartup/myXkbConfig.sh"
         spawn "bash ~/.config/myStartup/SyncDrive.sh"
         spawn "pkill polybar;polybar myConfig"
+        spawn "google-drive-ocamlfuse -label work /home/geotrader/work_mail/"
+        spawn "google-drive-ocamlfuse -label personal /home/geotrader/personal_mail"
         setWMName "LG3D"
 
 myLayoutHook = avoidStruts (tiled ||| Full)
