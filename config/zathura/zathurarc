@@ -1,3 +1,5 @@
 set selection-clipboard clipboard
 set recolor true
-set incremental-search true
+set incremental-search false
+set search hadjust false
+set vertical-center true
