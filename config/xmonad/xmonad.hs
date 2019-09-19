@@ -12,9 +12,6 @@ import qualified DBus as D
 import qualified DBus.Client as D
 import qualified Codec.Binary.UTF8.String as UTF8
 
--- for taffybar
--- import System.Taffybar.Support.PagerHints (pagerHints)
-
 main :: IO ()
 main = do
     dbus <- D.connectSession
@@ -36,7 +33,7 @@ myKeys =
     [ ("M-b",spawn "qutebrowser")
     , ("M-c",spawn "rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'")
     , ("M-s",spawn "steam")
-    , ("M-d",spawn "discord-canary")
+    , ("M-d",spawn "discord")
     , ("M-<Space>",spawn "rofi -show run")
     , ("M-<Return>",spawn myTerminal)
     , ("M-r" ,spawn "xmonad --recompile; xmonad --restart")
@@ -53,10 +50,10 @@ myKeys =
     ]
 
 myStartupHook = do
+        spawn "xsetroot -solid \#27313D"
         spawn "enpass"
         spawn "skypeforlinux"
         spawn "pkill pasystray;pasystray"
-        spawn "sudo updatedb"
         spawn "pkill greenclip;greenclip daemon"
         spawn "nitrogen --restore"
         spawn "fcitx-autostart"
