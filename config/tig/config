@@ -1,0 +1,1 @@
+bind main    H      ?git reset --hard %(commit)
