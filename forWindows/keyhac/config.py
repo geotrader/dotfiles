@@ -11,7 +11,7 @@ def configure(keymap):
         keymap.editor = "code"
     # --------------------------------------------------------------------
     # Customizing the display
-    keymap.setFont("RictyDiminishedDiscord", 12)
+    keymap.setFont("RictyDiminishedDiscord", 18)
     keymap.setTheme("black")
     # --------------------------------------------------------------------
 
@@ -54,34 +54,18 @@ def configure(keymap):
 
     # --------------------------------------------------------------------
     # execute or activate applications
-    if 1:
-        def find_window(class_name):
-            def get_window(wnd, arg):
-                nonlocal window
-                if wnd.isVisible() and not wnd.getOwner():
-                    if wnd.getClassName() == class_name:
-                        window = wnd
-                        return False
-                return True
-            window = None
-            Window.enum(get_window, None)
-            return window
-
-        def activate_or_execute(path, class_name=""):
-            wnd = find_window(class_name)
-            if wnd:
-                if wnd.isMinimized():
-                    wnd.restore()
-                wnd.getLastActivePopup().setForeground()
+        def activate_or_execute(exec_command, exe_name=None, class_name=None, window_text=None, check_func=None, force=False):
+            active_window = keymap.ActivateWindowCommand(exe_name, class_name, window_text, check_func, force)
+            if active_window() is None:
+                return keymap.ShellExecuteCommand(None, exec_command, "", "")()
             else:
-                executeFunc = keymap.ShellExecuteCommand(None, path, "", "")
-                executeFunc()
+                return active_window
 
-        keymap_global["A-E"] = lambda: activate_or_execute('everything')
-        keymap_global["A-N"] = lambda: activate_or_execute('cfiler', "CfilerWindowClass")
-        keymap_global["A-C"] = lambda: activate_or_execute('qutebrowser', "Qt5QWindowIcon")
-        # keymap_global["A-C"] = lambda: activate_or_execute('firefox', "MozillaWindowClass")
-        keymap_global["A-S"] = lambda: activate_or_execute('code', "")
+
+        keymap_global["A-E"] = lambda: activate_or_execute('everything',exe_name='Everything.exe')
+        keymap_global["A-N"] = lambda: activate_or_execute('cfiler', exe_name='cfiler.exe')
+        keymap_global["A-C"] = lambda: activate_or_execute('qutebrowser', exe_name='qutebrowser.exe')
+        keymap_global["A-S"] = lambda: activate_or_execute('code', exe_name='Code.exe')
 
     # --------------------------------------------------------------------
 
@@ -126,7 +110,6 @@ def configure(keymap):
         useful_items = [
             ("mail_address",     "null@xxx-co.jp"),
             ("YYYY/MM/DD HH:MM:SS",   dateAndTime("%Y/%m/%d %H:%M:%S")),
-            ("Paste with Full-Width",              toFullWidthClipboardText),
             ("Edit config.py",             keymap.command_EditConfig),
             ("Reload config.py",           keymap.command_ReloadConfig),
         ]
@@ -135,7 +118,6 @@ def configure(keymap):
         keymap.cblisters += [
             ("useful_items", cblister_FixedPhrase(useful_items)),
         ]
-
 
 def configure_ListWindow(window):
     window.keymap['J'] = window.command_CursorDown
