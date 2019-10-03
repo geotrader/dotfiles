@@ -6,7 +6,7 @@ from keyhac import *
 def configure(keymap):
 
     # --------------------------------------------------------------------
-    # Text editer setting for editting config.py file
+    # Text editor setting for editing config.py file
     if 1:
         keymap.editor = "code"
     # --------------------------------------------------------------------
@@ -22,7 +22,7 @@ def configure(keymap):
     if 1:
         keymap_global = keymap.defineWindowKeymap()
 
-        # vim keybind
+        # vim key bind
         keymap_global["O-29"] = 'F7'
         keymap_global["U0-H"] = 'Left'
         keymap_global["U0-J"] = 'Down'
@@ -56,11 +56,8 @@ def configure(keymap):
     # execute or activate applications
         def activate_or_execute(exec_command, exe_name=None, class_name=None, window_text=None, check_func=None, force=False):
             active_window = keymap.ActivateWindowCommand(exe_name, class_name, window_text, check_func, force)
-            if active_window() is None:
-                return keymap.ShellExecuteCommand(None, exec_command, "", "")()
-            else:
-                return active_window
-
+            if not active_window():
+                shellExecute(None, exec_command, "", "")
 
         keymap_global["A-E"] = lambda: activate_or_execute('everything',exe_name='Everything.exe')
         keymap_global["A-N"] = lambda: activate_or_execute('cfiler', exe_name='cfiler.exe')
